@@ -26,3 +26,15 @@ function convertCtoF(celsius) {
   
   let far = convertCtoF(30);
   console.log(far);
+
+  //   Reverse a String
+function reverseString(str) {
+    let output = "";
+    for(let i = str.length - 1; i >= 0; i --){
+      output += str[i]
+    }
+    return output;
+  }
+  
+  let outcome = reverseString("hello");
+  console.log(outcome);
