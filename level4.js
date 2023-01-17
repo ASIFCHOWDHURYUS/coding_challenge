@@ -38,3 +38,16 @@ function reverseString(str) {
   
   let outcome = reverseString("hello");
   console.log(outcome);
+
+  //   Factorize a Number
+function factorize(num) {
+    let product = 1;
+     for (let i = 2; i <= num; i++) {
+       product *= i;
+     }
+     return product;
+   }
+   
+   
+   let answer = factorize(5);
+   console.log(answer);
