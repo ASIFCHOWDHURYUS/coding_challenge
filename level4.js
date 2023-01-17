@@ -13,7 +13,16 @@ for(let i = first; i <= last; i++){
 }
 return output;
 
-
 }
 let result = smallAll([1, 4]);
 console.log(result);
+
+// challenge one : Convert Celsius to Fahrenheit
+
+function convertCtoF(celsius) {
+    let fahrenheit = celsius * (9/5) + 32;
+    return fahrenheit;
+  }
+  
+  let far = convertCtoF(30);
+  console.log(far);
