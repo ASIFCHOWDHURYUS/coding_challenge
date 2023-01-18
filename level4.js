@@ -63,3 +63,17 @@ function factorize(num) {
   
   let res = truncateString("A green and yellow basket", 11);
   console.log(res);
+
+  // where do the number belong
+function getIndexToIns(arr, num) {
+  let belong = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] < num){
+      belong ++
+    }
+  }
+  return belong;
+}
+
+let resu = getIndexToIns([40, 30, 20, 60], 50);
+console.log(resu);
