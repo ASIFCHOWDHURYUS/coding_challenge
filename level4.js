@@ -77,3 +77,24 @@ function getIndexToIns(arr, num) {
 
 let resu = getIndexToIns([40, 30, 20, 60], 50);
 console.log(resu);
+
+
+// Chunky array in group
+function chunkArrayInGroups(arr, size) {
+  let output = [];
+  let subarray = [];
+  let subctr = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(subctr === size){
+      subctr = 0;
+      output.push(subarray);
+      subarray = [];
+    }
+    subarray.push(arr[i]);
+    subctr ++;
+  } output.push(subarray);
+  return output;
+}
+
+let ans = chunkArrayInGroups(["a", "b", "c", "d"], 2);
+console.log(ans);
