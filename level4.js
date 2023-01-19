@@ -138,3 +138,28 @@ return str.substring(i) + cluster + "ay"; // modify
 
 let resul = translatePigLatin("rhythm");
 console.log(resul);
+
+//DNA pairing
+
+function pairElement(str){
+  let output = [];
+  for(let i = 0; str.length; i++){
+    if(str[i] === "A"){
+      output.push(["A", "T"])
+    }
+    if(str[i] === "T"){
+      output.push(["T", "A"])
+    }
+     if(str[i] === "G"){
+      output.push(["G", "C"])
+  }
+   if(str[i] === "C"){
+      output.push(["C", "G"])
+}
+  }
+return output;
+}
+  
+
+let encapsulating = pairElement("GCG");
+console.log(encapsulating);
