@@ -118,3 +118,23 @@ function destroyer(arr) {
 
 let add = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 console.log(add);
+
+// Way of altering Eng words
+function translatePigLatin(str) {
+  let firstLetter = str[0];
+  let vowel = "aeiou";
+  if(vowel.includes(firstLetter) === true){
+    return str + 'way'
+  }
+
+  let i = 0;
+  let cluster = "";
+  while(vowel.includes(str[i]) === false && i < str.length){
+    cluster += str[i];
+  i++;}
+
+return str.substring(i) + cluster + "ay"; // modify
+}
+
+let resul = translatePigLatin("rhythm");
+console.log(resul);
