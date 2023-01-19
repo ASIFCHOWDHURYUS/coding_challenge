@@ -1,3 +1,4 @@
+// Sum ALL numbers in a  Range
 function smallAll(arr){
     let first = arr[0];
         let last = arr[1];
@@ -98,3 +99,22 @@ function chunkArrayInGroups(arr, size) {
 
 let ans = chunkArrayInGroups(["a", "b", "c", "d"], 2);
 console.log(ans);
+
+// Seek and Destroy
+function destroyer(arr) {
+  let input = arguments[0];
+  let output = [];
+  let destroy = [];
+  for(let i = 1; i < arguments.length; i++){
+    destroy.push(arguments[i]);
+  }
+  for(let i = 0; i < input.length; i++){
+    if(destroy.includes(input[i]) === false){
+      output.push(input[i])
+    }
+  }
+  return output;
+}
+
+let add = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+console.log(add);
