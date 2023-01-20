@@ -31,7 +31,7 @@ let quotation = convertHtml('Stuff in "quotation marks"')
 console.log(convert, cont, quotation);
 
 //2.Sum All Primes
-function sumAllPrimes(nu){
+function sumAllPrimes(num){
     function isPrime(num){
         let sqrt = Math.sqrt(num);
         for (let i = 2; i <=sqrt; i++){
@@ -59,18 +59,23 @@ function aVeryBigSum(ar){
     }
     return sum;
 }
-function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
-
-    const arCount = parseInt(readLine().trim(), 10);
-
-    const ar = readLine().replace(/\s+$/g, '').split(' ').map(arTemp => parseInt(arTemp, 10));
-
-    const result = aVeryBigSum(ar);
-
-    ws.write(result + '\n');
-
-    ws.end();
-}
 let res = aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]);
 console.log(res);
+
+//5. Its base and height are both equal to . It is drawn using # symbols and spaces. The last line is not preceded by any spaces.
+//Write a program that prints a staircase of size .
+function staircase(n) {
+    let output = ''
+     for (let i = 1; i <= n; i++) {
+            for (let s = n - 1; s >= i; s--) {
+                output += ' '
+            }
+            for (let h = 1; h <= i; h++) {
+                output += '#'
+            }
+            output += "\n"
+           }
+        return output;
+    }
+    let vou = staircase(8);
+    console.log(vou);
