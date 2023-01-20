@@ -79,3 +79,35 @@ function staircase(n) {
     }
     let vou = staircase(8);
     console.log(vou);
+
+    //4..Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
+function plusMinus(arr) {
+    
+    let totalPos=0, totalNe=0, totalZe=0, arrLen = arr.length;
+    
+    for(let value of arr){
+        
+        switch(true){
+           
+           case (value > 0):
+            totalPos++;
+            break;
+            
+            case (value < 0):
+            totalNe++;
+            break;             
+            
+            case (value == 0):
+            totalZe++;
+            break;           
+        }
+        
+    }
+    
+    console.log(`${(totalPos/arrLen).toFixed(6)} \n ${(totalNe/arrLen).toFixed(6)} \n ${(totalZe/arrLen).toFixed(6)}`);
+
+}
+
+let negPos = plusMinus([-4,3,-9,0,4,1]);
+console.log(negPos);
+
