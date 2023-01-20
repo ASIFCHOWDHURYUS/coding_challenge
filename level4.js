@@ -163,3 +163,4 @@ return output;
 
 let encapsulating = pairElement("GCG");
 console.log(encapsulating);
+
