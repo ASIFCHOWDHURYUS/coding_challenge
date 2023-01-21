@@ -147,3 +147,11 @@ function breakingRecords(scores) {
 let scoreRecord = breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
 console.log(scoreRecord);
 
+//8. Bill Division
+function bonAppetit(bill, k, b) {
+    const annasBill = (bill.reduce((a, b) => a + b, 0) - bill[k]) / 2;
+    annasBill === b ? console.log('Bon Appetit') : console.log(b - annasBill);
+}
+let bill = bonAppetit([3, 10, 2, 9], 1, 12)
+console.log(bill);
+
