@@ -192,3 +192,4 @@ function hurdleRace(k, heigh) {
   let top = hurdleRace(4, [1, 6, 3, 5, 2]);
   console.log(top);
 
+  
