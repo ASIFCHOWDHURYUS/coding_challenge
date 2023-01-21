@@ -155,3 +155,19 @@ function bonAppetit(bill, k, b) {
 let bill = bonAppetit([3, 10, 2, 9], 1, 12)
 console.log(bill);
 
+//9.Cats and a Mouse:
+
+function catAndMouse(x, y, z) {
+    let catAPos = Math.abs(z - x);
+    let catBPos = Math.abs(z - y);
+    if (catAPos < catBPos) {
+        return "Cat A";
+    } else if (catBPos < catAPos) {
+        return "Cat B";
+    } else {
+        return "Mouse C";
+    }
+}
+let pet = catAndMouse([1, 2, 3]);
+console.log(pet);
+
