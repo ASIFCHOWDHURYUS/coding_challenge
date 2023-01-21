@@ -26,3 +26,16 @@ function getGrade(score) {
 
 let output = getGrade(30);
 console.log(output);
+
+// 2. Simple Array Sum
+
+function simpleArraySum(ar) {
+    let sum = 0;
+    for(let i = 0; i < ar.length; i++){
+        sum = sum + ar[i];
+        
+    } 
+    return sum;
+}
+let arsum = simpleArraySum([1, 2, 3, 4, 10, 11])
+console.log(arsum);
