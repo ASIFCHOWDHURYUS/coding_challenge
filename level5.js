@@ -171,3 +171,24 @@ function catAndMouse(x, y, z) {
 let pet = catAndMouse([1, 2, 3]);
 console.log(pet);
 
+//10.The Hurdle Race
+
+function hurdleRace(k, heigh) {
+    let maxCount = 0;
+    for (let i = 0; i < heigh.length; i++) {
+        if (heigh[i] > k) {
+           let diff = heigh[i] - k;
+            if (diff > maxCount) {
+                maxCount = diff;
+            }
+
+        }
+    }
+    if (maxCount === 0) {
+        return 0;
+    }
+    return maxCount;
+}
+  let top = hurdleRace(4, [1, 6, 3, 5, 2]);
+  console.log(top);
+
