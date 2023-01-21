@@ -126,3 +126,24 @@ function birthdayCakeCandles(candles) {
     let getCandles = birthdayCakeCandles([1,3,2,3]);
     console.log(getCandles);
 
+    //7.Breaking the Records
+//QUESTION: Maria plays college basketball and wants to go pro. Each season she maintains a record of her play. She tabulates the number of times she breaks her season record for most points and least points in a game. Points scored in the first game establish her record for the season, and she begins counting from there.
+function breakingRecords(scores) {
+    let highScore = scores[0];
+    let lowScore = scores[0];
+    let highCount = 0;
+    let lowCount = 0;
+    for(let i=1; i<scores.length; i++){
+        if(scores[i] > highScore){
+            highScore = scores[i];
+            highCount++;
+        }else if(scores[i] < lowScore){
+            lowScore = scores[i];
+            lowCount++;
+        }
+    }
+    return [highCount, lowCount];
+}
+let scoreRecord = breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
+console.log(scoreRecord);
+
