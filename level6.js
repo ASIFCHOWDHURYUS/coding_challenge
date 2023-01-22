@@ -58,3 +58,27 @@ function getSecondLargest(nums) {
 }
 let getsecond =getSecondLargest([6, 7, 4, 9, 80])
 console.log(getsecond);
+
+// 4. loops
+function vowelsAndConsonants(s) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+//  const stringArray = s.split('');
+for(let i=0; i < s.length; i++){
+   for(let j=0; j < vowels.length; j++){
+     if(s[i] == vowels[j]){
+       console.log(s[i]);
+     }
+   }
+ }
+const consonent = 'bcdfghjklmnpqrstvwxyz'.split('');
+for(let i=0; i < s.length; i++){
+   for(let j=0; j < consonent.length; j++){
+     if(s[i] == consonent[j]){
+       console.log(s[i]);
+     }
+   }
+ }
+   
+}
+ let select = vowelsAndConsonants(['a', 'b', 'c', 'd', 'e']);
+ console.log(select);
