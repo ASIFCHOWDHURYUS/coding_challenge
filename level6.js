@@ -82,3 +82,17 @@ for(let i=0; i < s.length; i++){
 }
  let select = vowelsAndConsonants(['a', 'b', 'c', 'd', 'e']);
  console.log(select);
+
+ // 5. Multiples of 3 and 5
+ function sumOf3or5(num) {
+    let sum = 0;
+    for (let i = 3; i < num; i ++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+
+    }
+    return sum;
+ }
+ let multiple = sumOf3or5(5);
+ console.log(multiple);
