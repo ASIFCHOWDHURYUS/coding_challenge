@@ -114,3 +114,16 @@ return "NO"
  }
  let sherlock =balancedSums([1, 1, 4, 1, 1]);
  console.log(sherlock);
+
+ // 7. count object
+ function getCount(objects) {
+    let count = 0;
+    for( let i = 0; i < objects.length; i++){
+        if(objects[i].x == objects[i].y){
+            count++
+        }
+    }
+    return count;
+ }
+ let number = getCount([2, 3]);
+ console.log(number);
