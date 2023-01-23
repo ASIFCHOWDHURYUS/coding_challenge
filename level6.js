@@ -96,3 +96,21 @@ for(let i=0; i < s.length; i++){
  }
  let multiple = sumOf3or5(5);
  console.log(multiple);
+
+ // 6. sherLock and Array
+ function balancedSums(arr) {
+    if (arr.length === 1) return "YES";
+    let leftSum, rightSum;
+    const total = arr.reduce((sum, value) => sum +
+    value, 0);
+    for (let i = 0; i < arr.length; i++) {
+        if (i === 0) leftSum = 0;
+        else leftSum += arr[i - 1];
+        if (i === arr.length - 1) rightSum = 0;
+        else rightSum = total - leftSum - arr[i];
+        if (leftSum === rightSum) return "YES";
+}
+return "NO"
+ }
+ let sherlock =balancedSums([1, 1, 4, 1, 1]);
+ console.log(sherlock);
