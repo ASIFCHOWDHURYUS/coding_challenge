@@ -127,3 +127,38 @@ return "NO"
  }
  let number = getCount([2, 3]);
  console.log(number);
+
+ // 8. missing NuMbEr
+function missingNumbers(arr, brr) {
+    let key = 0;
+    let out=[];
+    let hash={};
+    
+       for (let i=0; i < brr.length; ++i) { 
+           let key = brr[i];
+           hash[key] = 0;
+           console.log(key,hash[key])
+      }
+    
+      for (let i=0; i < brr.length; ++i) {
+            let key = brr[i];
+            hash[key] += 1; 
+      }
+     
+      for (let i=0;i < arr.length; ++i) { 
+           let key = arr[i];
+           hash[key] -= 1;
+            console.log(hash[key]);
+     }
+    
+    
+    for (let e in hash) {  
+         if (hash[e] > 0 ) {
+           out.push(e);
+          {
+    }
+    return (out);
+    } }
+     }
+     let mn = missingNumbers([203, 204, 205, 206, 207, 208, 203, 204, 205, 206], [203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204]);
+     console.log(mn);
