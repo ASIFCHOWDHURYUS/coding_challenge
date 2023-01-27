@@ -280,6 +280,22 @@ function convertToF(celsius) {
       }
     }
   };
+  // Cats and a Mouse (HackerRank):
+  function catAndMouse(x, y, z) {
+    let diffx = Math.abs(z-x);
+    let diffy = Math.abs(z-y);
+  
+  
+    if(diffx === diffy) {
+      return 'Mouse C';
+    } else {
+      if(diffx < diffy) {
+        return 'Cat A';
+      } else {
+        return 'Cat B';
+      }
+    }
+  };
   
   // The Hurdle Race (HackerRank):
   function hurdleRace(k, height) {
